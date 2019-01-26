@@ -29,7 +29,8 @@ public class GameController : MonoBehaviour
 
         GameStates = new Dictionary<string, bool>
         {
-            { "CanMove", true }
+            { "CanMove", true },
+            { "Blub", false }
         };
 
     }

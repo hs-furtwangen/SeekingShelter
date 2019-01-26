@@ -13,8 +13,14 @@ public class Interactable : MonoBehaviour
     public List<string> GameStatesToDisable;
     public List<string> GameStatesToToggle;
 
+    public List<string> DependsOnGameStates;
+
+    public bool Playsound;
+    public int SoundID;
 
     private Material mat;
+
+    private bool active;
 
     void Start()
     {
@@ -29,73 +35,112 @@ public class Interactable : MonoBehaviour
         catch { }
     }
 
+    void Update()
+    {
+        if (!active)
+        {
+            if (DependsOnGameStates == null || DependsOnGameStates.Count < 1)
+            {
+                active = true;
+            }
+            else
+            {
+                bool check = true;
+
+                foreach (var state in DependsOnGameStates)
+                {
+                    if (GameController.Instance.GameStates.ContainsKey(state))
+                    {
+                        if (!GameController.Instance.GameStates[state])
+                        {
+                            check = false;
+                        }
+                    }
+                }
+
+                active = check;
+            }
+        }
+    }
 
     public void Interact()
     {
-        if (Teleport)
+        if (active)
         {
-            if (ActivateCamera != null && DeactivateCamera != null)
+            if (Teleport)
             {
-                if (TeleportTransform != null)
+                if (ActivateCamera != null && DeactivateCamera != null)
                 {
-                    GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera);
-                }
-                else
-                {
-                    GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera);
+                    if (TeleportTransform != null)
+                    {
+                        GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera);
+                    }
+                    else
+                    {
+                        GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera);
+                    }
                 }
             }
-        }
 
-        if (GameStatesToEnable != null && GameStatesToEnable.Count > 0)
-        {
-            foreach (var state in GameStatesToEnable)
+            if (GameStatesToEnable != null && GameStatesToEnable.Count > 0)
             {
-                if (GameController.Instance.GameStates.ContainsKey(state))
+                foreach (var state in GameStatesToEnable)
                 {
-                    GameController.Instance.GameStates[state] = true;
+                    if (GameController.Instance.GameStates.ContainsKey(state))
+                    {
+                        GameController.Instance.GameStates[state] = true;
+                    }
                 }
             }
-        }
 
-        if (GameStatesToDisable != null && GameStatesToDisable.Count > 0)
-        {
-            foreach (var state in GameStatesToDisable)
+            if (GameStatesToDisable != null && GameStatesToDisable.Count > 0)
             {
-                if (GameController.Instance.GameStates.ContainsKey(state))
+                foreach (var state in GameStatesToDisable)
                 {
-                    GameController.Instance.GameStates[state] = false;
+                    if (GameController.Instance.GameStates.ContainsKey(state))
+                    {
+                        GameController.Instance.GameStates[state] = false;
+                    }
                 }
             }
-        }
 
-        if (GameStatesToToggle != null && GameStatesToToggle.Count > 0)
-        {
-            foreach (var state in GameStatesToToggle)
+            if (GameStatesToToggle != null && GameStatesToToggle.Count > 0)
             {
-                if (GameController.Instance.GameStates.ContainsKey(state))
+                foreach (var state in GameStatesToToggle)
                 {
-                    GameController.Instance.GameStates[state] = !GameController.Instance.GameStates[state];
+                    if (GameController.Instance.GameStates.ContainsKey(state))
+                    {
+                        GameController.Instance.GameStates[state] = !GameController.Instance.GameStates[state];
+                    }
                 }
+            }
+
+            if (Playsound)
+            {
+                SoundManager.Instance.Playsound(SoundID);
             }
         }
     }
 
     public void HighlightStart()
     {
-        if (mat != null)
+        if (active)
         {
-            mat.SetFloat("_InvertColors", 1);
+            if (mat != null)
+            {
+                mat.SetFloat("_InvertColors", 1);
+            }
         }
     }
 
     public void HighlightStop()
     {
-        if (mat != null)
+        if (active)
         {
-            mat.SetFloat("_InvertColors", 0);
+            if (mat != null)
+            {
+                mat.SetFloat("_InvertColors", 0);
+            }
         }
     }
-
-
 }

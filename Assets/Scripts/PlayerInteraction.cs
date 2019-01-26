@@ -26,7 +26,7 @@ public class PlayerInteraction : MonoBehaviour
 
     private void OnTriggerStay2D(Collider2D collision)
     {
-        if (Input.GetAxis("Fire1") > 0)
+        if (Input.GetKeyDown(KeyCode.Space))
         {
             if (collision.gameObject.tag == "Interactable")
             {
