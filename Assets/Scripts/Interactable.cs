@@ -13,6 +13,23 @@ public class Interactable : MonoBehaviour
     public List<string> GameStatesToDisable;
     public List<string> GameStatesToToggle;
 
+
+    private Material mat;
+
+    void Start()
+    {
+        try
+        {
+            var tempmat = GetComponent<SpriteRenderer>().material;
+            if (tempmat.shader.name == "Sprites/Invertable")
+            {
+                mat = tempmat;
+            }
+        }
+        catch { }
+    }
+
+
     public void Interact()
     {
         if (Teleport)
@@ -61,6 +78,22 @@ public class Interactable : MonoBehaviour
                     GameController.Instance.GameStates[state] = !GameController.Instance.GameStates[state];
                 }
             }
+        }
+    }
+
+    public void HighlightStart()
+    {
+        if (mat != null)
+        {
+            mat.SetFloat("_InvertColors", 1);
+        }
+    }
+
+    public void HighlightStop()
+    {
+        if (mat != null)
+        {
+            mat.SetFloat("_InvertColors", 0);
         }
     }
 

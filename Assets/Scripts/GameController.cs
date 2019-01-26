@@ -29,9 +29,10 @@ public class GameController : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         BlackfadeImage = GameObject.Find("Blackfade").GetComponent<Image>();
 
-        GameStates = new Dictionary<string, bool>();
-
-        GameStates.Add("CanMove", true);
+        GameStates = new Dictionary<string, bool>
+        {
+            { "CanMove", true }
+        };
 
     }
 
