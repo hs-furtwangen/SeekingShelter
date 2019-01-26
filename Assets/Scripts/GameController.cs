@@ -16,8 +16,6 @@ public class GameController : MonoBehaviour
     private Transform Player;
     private Image BlackfadeImage;
 
-    public Cinemachine.CinemachineBrain CinemachineBrainThing;
-
     // Start is called before the first frame update
     void Start()
     {
