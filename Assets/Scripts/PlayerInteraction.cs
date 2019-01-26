@@ -16,6 +16,14 @@ public class PlayerInteraction : MonoBehaviour
 
     }
 
+    private void OnTriggerEnter2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            collision.gameObject.GetComponent<Interactable>().HighlightStart();
+        }
+    }
+
     private void OnTriggerStay2D(Collider2D collision)
     {
         if (Input.GetAxis("Fire1") > 0)
@@ -26,4 +34,13 @@ public class PlayerInteraction : MonoBehaviour
             }
         }
     }
+
+    private void OnTriggerExit2D(Collider2D collision)
+    {
+        if (collision.gameObject.tag == "Interactable")
+        {
+            collision.gameObject.GetComponent<Interactable>().HighlightStop();
+        }
+    }
+
 }

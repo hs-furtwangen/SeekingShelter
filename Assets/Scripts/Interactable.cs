@@ -6,22 +6,44 @@ public class Interactable : MonoBehaviour
     public bool Teleport;
     public Transform TeleportTransform;
     public Vector3 TeleportLocation;
+    public Cinemachine.CinemachineVirtualCamera ActivateCamera;
+    public Cinemachine.CinemachineVirtualCamera DeactivateCamera;
 
     public List<string> GameStatesToEnable;
     public List<string> GameStatesToDisable;
     public List<string> GameStatesToToggle;
 
+
+    private Material mat;
+
+    void Start()
+    {
+        try
+        {
+            var tempmat = GetComponent<SpriteRenderer>().material;
+            if (tempmat.shader.name == "Sprites/Invertable")
+            {
+                mat = tempmat;
+            }
+        }
+        catch { }
+    }
+
+
     public void Interact()
     {
         if (Teleport)
         {
-            if (TeleportTransform != null)
+            if (ActivateCamera != null && DeactivateCamera != null)
             {
-                GameController.Instance.DoTeleport(TeleportTransform.position);
-            }
-            else
-            {
-                GameController.Instance.DoTeleport(TeleportLocation);
+                if (TeleportTransform != null)
+                {
+                    GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera);
+                }
+                else
+                {
+                    GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera);
+                }
             }
         }
 
@@ -56,6 +78,22 @@ public class Interactable : MonoBehaviour
                     GameController.Instance.GameStates[state] = !GameController.Instance.GameStates[state];
                 }
             }
+        }
+    }
+
+    public void HighlightStart()
+    {
+        if (mat != null)
+        {
+            mat.SetFloat("_InvertColors", 1);
+        }
+    }
+
+    public void HighlightStop()
+    {
+        if (mat != null)
+        {
+            mat.SetFloat("_InvertColors", 0);
         }
     }
 
