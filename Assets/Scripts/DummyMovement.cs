@@ -7,18 +7,20 @@ public class DummyMovement : MonoBehaviour
     Rigidbody2D rb;
 
     private Animator anim;
+    private SpriteRenderer spriteRend;
 
     // Start is called before the first frame update
     void Start()
     {
         rb = GetComponent<Rigidbody2D>();
         anim = GetComponent<Animator>();
+        spriteRend = GetComponent<SpriteRenderer>();
     }
 
     // Update is called once per frame
     void Update()
     {
-        //float moveHorizontal = Input.GetAxis("Horizontal");
+        float moveHorizontal = Input.GetAxis("Horizontal");
 
         if (GameController.Instance.CanMove)
         {
@@ -27,9 +29,17 @@ public class DummyMovement : MonoBehaviour
         else
         {
             rb.velocity = Vector2.zero;
+            rb.angularDrag = 0f;
         }
 
-
-        //anim.SetFloat("movement", moveHorizontal);
+        if (moveHorizontal < -0.1f)
+        {
+            anim.SetBool("rightFacing", false);
+        }
+        if (moveHorizontal > 0.1f)
+        {
+            anim.SetBool("rightFacing", true);
+        }
+        anim.SetFloat("movement", moveHorizontal);
     }
 }
