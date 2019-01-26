@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DummyMovement : MonoBehaviour
 {
@@ -15,7 +13,7 @@ public class DummyMovement : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (GameController.Instance.CanMove)
+        if (GameController.Instance.GameStates["CanMove"])
         {
             rb.AddForce(Vector2.right * Input.GetAxis("Horizontal") * 10);
         }

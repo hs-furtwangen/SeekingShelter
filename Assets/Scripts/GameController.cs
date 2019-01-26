@@ -3,13 +3,14 @@ using System.Collections.Generic;
 using UnityEngine;
 using UnityEngine.UI;
 
+[ExecuteInEditMode]
 public class GameController : MonoBehaviour
 {
     // Poor mans singelton
     public static GameController Instance;
 
     //Really importatnt states
-    public bool CanMove = true;
+    public Dictionary<string, bool> GameStates;
 
     //all the things to get for methodes
     private Transform Player;
@@ -27,11 +28,15 @@ public class GameController : MonoBehaviour
         Player = GameObject.FindGameObjectWithTag("Player").transform;
         BlackfadeImage = GameObject.Find("Blackfade").GetComponent<Image>();
 
+        GameStates = new Dictionary<string, bool>();
+
+        GameStates.Add("CanMove", true);
+
     }
 
     public void DoTeleport(Vector2 pos)
     {
-        CanMove = false;
+        GameStates["CanMove"] = false;
 
         StartCoroutine(TeleportCo(pos));
     }
@@ -39,9 +44,9 @@ public class GameController : MonoBehaviour
     IEnumerator TeleportCo(Vector2 pos)
     {
         StartCoroutine(FadeOut());
-        yield return new WaitForSecondsRealtime(5f);
-        Player.Translate(pos);
-        CanMove = true;
+        yield return new WaitForSecondsRealtime(2f);
+        Player.transform.position = pos;
+        GameStates["CanMove"] = true;
         StartCoroutine(FadeIn());
     }
 
