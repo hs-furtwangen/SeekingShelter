@@ -1,6 +1,4 @@
-﻿using System.Collections;
-using System.Collections.Generic;
-using UnityEngine;
+﻿using UnityEngine;
 
 public class DummyMovement : MonoBehaviour
 {
@@ -22,7 +20,8 @@ public class DummyMovement : MonoBehaviour
     {
         float moveHorizontal = Input.GetAxis("Horizontal");
 
-        if (GameController.Instance.CanMove)
+        if (GameController.Instance.GameStates["CanMove"])
+
         {
             rb.AddForce(Vector2.right * Input.GetAxis("Horizontal") * 10);
         }
@@ -32,14 +31,7 @@ public class DummyMovement : MonoBehaviour
             rb.angularDrag = 0f;
         }
 
-        if (moveHorizontal < -0.1f)
-        {
-            anim.SetBool("rightFacing", false);
-        }
-        if (moveHorizontal > 0.1f)
-        {
-            anim.SetBool("rightFacing", true);
-        }
+        
         anim.SetFloat("movement", moveHorizontal);
     }
 }
