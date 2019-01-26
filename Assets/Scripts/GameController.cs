@@ -16,6 +16,7 @@ public class GameController : MonoBehaviour
     private Transform Player;
     private Image BlackfadeImage;
 
+    public Cinemachine.CinemachineBrain CinemachineBrainThing;
 
     // Start is called before the first frame update
     void Start()
@@ -34,18 +35,20 @@ public class GameController : MonoBehaviour
 
     }
 
-    public void DoTeleport(Vector2 pos)
+    public void DoTeleport(Vector2 pos, Cinemachine.CinemachineVirtualCamera ActivateCamera, Cinemachine.CinemachineVirtualCamera DeactivateCamera)
     {
         GameStates["CanMove"] = false;
 
-        StartCoroutine(TeleportCo(pos));
+        StartCoroutine(TeleportCo(pos, ActivateCamera, DeactivateCamera));
     }
 
-    IEnumerator TeleportCo(Vector2 pos)
+    IEnumerator TeleportCo(Vector2 pos, Cinemachine.CinemachineVirtualCamera ActivateCamera, Cinemachine.CinemachineVirtualCamera DeactivateCamera)
     {
         StartCoroutine(FadeOut());
         yield return new WaitForSecondsRealtime(2f);
         Player.transform.position = pos;
+        ActivateCamera.enabled = true;
+        DeactivateCamera.enabled = false;
         GameStates["CanMove"] = true;
         StartCoroutine(FadeIn());
     }

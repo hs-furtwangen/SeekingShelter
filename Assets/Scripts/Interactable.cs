@@ -6,6 +6,8 @@ public class Interactable : MonoBehaviour
     public bool Teleport;
     public Transform TeleportTransform;
     public Vector3 TeleportLocation;
+    public Cinemachine.CinemachineVirtualCamera ActivateCamera;
+    public Cinemachine.CinemachineVirtualCamera DeactivateCamera;
 
     public List<string> GameStatesToEnable;
     public List<string> GameStatesToDisable;
@@ -15,13 +17,16 @@ public class Interactable : MonoBehaviour
     {
         if (Teleport)
         {
-            if (TeleportTransform != null)
+            if (ActivateCamera != null && DeactivateCamera != null)
             {
-                GameController.Instance.DoTeleport(TeleportTransform.position);
-            }
-            else
-            {
-                GameController.Instance.DoTeleport(TeleportLocation);
+                if (TeleportTransform != null)
+                {
+                    GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera);
+                }
+                else
+                {
+                    GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera);
+                }
             }
         }
 
