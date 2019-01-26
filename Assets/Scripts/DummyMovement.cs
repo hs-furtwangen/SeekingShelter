@@ -30,8 +30,20 @@ public class DummyMovement : MonoBehaviour
             rb.velocity = Vector2.zero;
             rb.angularDrag = 0f;
         }
-
-        
         anim.SetFloat("movement", moveHorizontal);
+
+        if (Input.GetKeyDown("c"))
+        {
+            anim.SetBool("isCrouching", true);
+        }
+        if (Input.GetKeyDown("v"))
+        {
+            anim.SetBool("isCrouching", false);
+        }
+        if (Input.GetKeyDown("x"))
+        {
+            anim.SetBool("isCaught", true);
+        }
     }
+
 }

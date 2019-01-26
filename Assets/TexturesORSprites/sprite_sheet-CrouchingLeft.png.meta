@@ -1,0 +1,813 @@
+fileFormatVersion: 2
+guid: 276c5630b6f74b6499dc428587823d9c
+TextureImporter:
+  fileIDToRecycleName:
+    21300000: sprite_sheet-CrouchingLeft_0
+    21300002: sprite_sheet-CrouchingLeft_1
+    21300004: sprite_sheet-CrouchingLeft_2
+    21300006: sprite_sheet-CrouchingLeft_3
+    21300008: sprite_sheet-CrouchingLeft_4
+    21300010: sprite_sheet-CrouchingLeft_5
+    21300012: sprite_sheet-CrouchingLeft_6
+    21300014: sprite_sheet-CrouchingLeft_7
+    21300016: sprite_sheet-CrouchingLeft_8
+    21300018: sprite_sheet-CrouchingLeft_9
+    21300020: sprite_sheet-CrouchingLeft_10
+    21300022: sprite_sheet-CrouchingLeft_11
+    21300024: sprite_sheet-CrouchingLeft_12
+    21300026: sprite_sheet-CrouchingLeft_13
+    21300028: sprite_sheet-CrouchingLeft_14
+    21300030: sprite_sheet-CrouchingLeft_15
+    21300032: sprite_sheet-CrouchingLeft_16
+    21300034: sprite_sheet-CrouchingLeft_17
+    21300036: sprite_sheet-CrouchingLeft_18
+    21300038: sprite_sheet-CrouchingLeft_19
+    21300040: sprite_sheet-CrouchingLeft_20
+    21300042: sprite_sheet-CrouchingLeft_21
+    21300044: sprite_sheet-CrouchingLeft_22
+    21300046: sprite_sheet-CrouchingLeft_23
+    21300048: sprite_sheet-CrouchingLeft_24
+    21300050: sprite_sheet-CrouchingLeft_25
+    21300052: sprite_sheet-CrouchingLeft_26
+    21300054: sprite_sheet-CrouchingLeft_27
+    21300056: sprite_sheet-CrouchingLeft_28
+    21300058: sprite_sheet-CrouchingLeft_29
+    21300060: sprite_sheet-CrouchingLeft_30
+    21300062: sprite_sheet-CrouchingLeft_31
+    21300064: sprite_sheet-CrouchingLeft_32
+    21300066: sprite_sheet-CrouchingLeft_33
+  externalObjects: {}
+  serializedVersion: 7
+  mipmaps:
+    mipMapMode: 0
+    enableMipMap: 0
+    sRGBTexture: 1
+    linearTexture: 0
+    fadeOut: 0
+    borderMipMap: 0
+    mipMapsPreserveCoverage: 0
+    alphaTestReferenceValue: 0.5
+    mipMapFadeDistanceStart: 1
+    mipMapFadeDistanceEnd: 3
+  bumpmap:
+    convertToNormalMap: 0
+    externalNormalMap: 0
+    heightScale: 0.25
+    normalMapFilter: 0
+  isReadable: 0
+  streamingMipmaps: 0
+  streamingMipmapsPriority: 0
+  grayScaleToAlpha: 0
+  generateCubemap: 6
+  cubemapConvolution: 0
+  seamlessCubemap: 0
+  textureFormat: 1
+  maxTextureSize: 2048
+  textureSettings:
+    serializedVersion: 2
+    filterMode: -1
+    aniso: -1
+    mipBias: -100
+    wrapU: 1
+    wrapV: 1
+    wrapW: 1
+  nPOTScale: 0
+  lightmap: 0
+  compressionQuality: 50
+  spriteMode: 2
+  spriteExtrude: 1
+  spriteMeshType: 1
+  alignment: 0
+  spritePivot: {x: 0.5, y: 0.5}
+  spritePixelsToUnits: 100
+  spriteBorder: {x: 0, y: 0, z: 0, w: 0}
+  spriteGenerateFallbackPhysicsShape: 1
+  alphaUsage: 1
+  alphaIsTransparency: 1
+  spriteTessellationDetail: -1
+  textureType: 8
+  textureShape: 1
+  singleChannelComponent: 0
+  maxTextureSizeSet: 0
+  compressionQualitySet: 0
+  textureFormatSet: 0
+  platformSettings:
+  - serializedVersion: 2
+    buildTarget: DefaultTexturePlatform
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  - serializedVersion: 2
+    buildTarget: Standalone
+    maxTextureSize: 2048
+    resizeAlgorithm: 0
+    textureFormat: -1
+    textureCompression: 1
+    compressionQuality: 50
+    crunchedCompression: 0
+    allowsAlphaSplitting: 0
+    overridden: 0
+    androidETC2FallbackOverride: 0
+  spriteSheet:
+    serializedVersion: 2
+    sprites:
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_0
+      rect:
+        serializedVersion: 2
+        x: 6120
+        y: 4965
+        width: 534
+        height: 1487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f75dc764399481d4f9ad67d567797562
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_1
+      rect:
+        serializedVersion: 2
+        x: 6780
+        y: 4973
+        width: 526
+        height: 1487
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 865b86b8e8e552f438535c383329a5a1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_2
+      rect:
+        serializedVersion: 2
+        x: 7476
+        y: 4981
+        width: 328
+        height: 1509
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: eacac7549f27a454494999f5cb24fa60
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_3
+      rect:
+        serializedVersion: 2
+        x: 7884
+        y: 6448
+        width: 126
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 4837526f3ba5f9b4b9c43ab7b60ea497
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_4
+      rect:
+        serializedVersion: 2
+        x: 7872
+        y: 6305
+        width: 87
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 1251cc90b74259e4e92515a14e1c906e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_5
+      rect:
+        serializedVersion: 2
+        x: 7899
+        y: 6159
+        width: 99
+        height: 127
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 764f25d8e514be345a556106a364ba8e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_6
+      rect:
+        serializedVersion: 2
+        x: 7836
+        y: 6108
+        width: 209
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ee63818738d46d5459957be6b3f6893d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_7
+      rect:
+        serializedVersion: 2
+        x: 7016
+        y: 4894
+        width: 140
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: abba6c2572914914086c42011c2cf1ee
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_8
+      rect:
+        serializedVersion: 2
+        x: 7710
+        y: 4925
+        width: 78
+        height: 36
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 0da6a9067e3cc7440ad1c6dd407bc3e9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_9
+      rect:
+        serializedVersion: 2
+        x: 6381
+        y: 4890
+        width: 27
+        height: 35
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: f8b81f2fdf4e0a84a8791ca418ad7418
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_10
+      rect:
+        serializedVersion: 2
+        x: 6416
+        y: 4882
+        width: 101
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 9f56cd22067705747a5a975abc9d458c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_11
+      rect:
+        serializedVersion: 2
+        x: 7555
+        y: 4838
+        width: 237
+        height: 87
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bba48dca8f9d72d40a40e75ec4dcb76a
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_12
+      rect:
+        serializedVersion: 2
+        x: 7696
+        y: 4882
+        width: 99
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 322586c8f39dd504ab24e85873ad79ca
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_13
+      rect:
+        serializedVersion: 2
+        x: 6049
+        y: 3257
+        width: 312
+        height: 1490
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 2d38ab05ff717084c90c67e7e7c21dd6
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_14
+      rect:
+        serializedVersion: 2
+        x: 6503
+        y: 3257
+        width: 317
+        height: 1494
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8dca23deaf837ad479b924d5414736fe
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_15
+      rect:
+        serializedVersion: 2
+        x: 6990
+        y: 3264
+        width: 312
+        height: 1495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 68a4cda9f60739f45a9244e98f28bd6e
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_16
+      rect:
+        serializedVersion: 2
+        x: 7508
+        y: 3268
+        width: 312
+        height: 1495
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ed314b46100ea95499ad818f836dc324
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_17
+      rect:
+        serializedVersion: 2
+        x: 6159
+        y: 3185
+        width: 32
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8445ab700c7a5f540a2ec5f47ac0e3b9
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_18
+      rect:
+        serializedVersion: 2
+        x: 6195
+        y: 3185
+        width: 86
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: ea291d57a3162b541a0830f95fa85816
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_19
+      rect:
+        serializedVersion: 2
+        x: 6614
+        y: 3193
+        width: 115
+        height: 39
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: b85c06f3f2a832941a4aefb66e3d2675
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_20
+      rect:
+        serializedVersion: 2
+        x: 7104
+        y: 3201
+        width: 28
+        height: 40
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 841c6fecdd176cf4e855f283c59f504d
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_21
+      rect:
+        serializedVersion: 2
+        x: 7136
+        y: 3201
+        width: 79
+        height: 43
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 8aaa72b360fd124408f5edb47422ce5b
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_22
+      rect:
+        serializedVersion: 2
+        x: 7532
+        y: 3197
+        width: 98
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: bfe42acfb0063214ea1d8a2247bcdb0c
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_23
+      rect:
+        serializedVersion: 2
+        x: 7638
+        y: 3205
+        width: 119
+        height: 47
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 84c63a5d41c9d214592d0c6d873cc6a2
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_24
+      rect:
+        serializedVersion: 2
+        x: 4376
+        y: 2331
+        width: 1123
+        height: 724
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ec99ec8d92426047a06a659076f7e67
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_25
+      rect:
+        serializedVersion: 2
+        x: 5590
+        y: 2331
+        width: 1119
+        height: 732
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 3ae903dff412a6e45a5218010fa81b14
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_26
+      rect:
+        serializedVersion: 2
+        x: 6709
+        y: 2351
+        width: 1123
+        height: 735
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 142ffc7b01636ca4c830ac78a5c808c1
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_27
+      rect:
+        serializedVersion: 2
+        x: 6889
+        y: 2349
+        width: 4
+        height: 8
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 226da55a7c2707e49af752b097a80b37
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_28
+      rect:
+        serializedVersion: 2
+        x: 5766
+        y: 2329
+        width: 8
+        height: 4
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: a086816f3d2ccf841b159924a3371851
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_29
+      rect:
+        serializedVersion: 2
+        x: 4957
+        y: 2201
+        width: 51
+        height: 59
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 57f4f7a1bec2161419c4b4ab378f98aa
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_30
+      rect:
+        serializedVersion: 2
+        x: 5012
+        y: 2199
+        width: 163
+        height: 53
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 7b77e40ac19e05e4ba35d61fe9ba7100
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_31
+      rect:
+        serializedVersion: 2
+        x: 6041
+        y: 2221
+        width: 39
+        height: 55
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 91bde3065a4cdfc438fd2145c037c068
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_32
+      rect:
+        serializedVersion: 2
+        x: 6088
+        y: 2224
+        width: 150
+        height: 52
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 01766b7190fba7842b4cd02953fa29ff
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    - serializedVersion: 2
+      name: sprite_sheet-CrouchingLeft_33
+      rect:
+        serializedVersion: 2
+        x: 7468
+        y: 2244
+        width: 190
+        height: 51
+      alignment: 0
+      pivot: {x: 0, y: 0}
+      border: {x: 0, y: 0, z: 0, w: 0}
+      outline: []
+      physicsShape: []
+      tessellationDetail: 0
+      bones: []
+      spriteID: 65967f832c27acf4c9ad65c0273b4032
+      vertices: []
+      indices: 
+      edges: []
+      weights: []
+    outline: []
+    physicsShape: []
+    bones: []
+    spriteID: a26d83547df6a9948bdf1dcf82cb428b
+    vertices: []
+    indices: 
+    edges: []
+    weights: []
+  spritePackingTag: 
+  pSDRemoveMatte: 0
+  pSDShowRemoveMatteOption: 0
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
