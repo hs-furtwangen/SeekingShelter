@@ -34,10 +34,10 @@ public class DialogueTrigger : MonoBehaviour
         {
             CloseTextBox();
         }
-        if (Input.GetKeyDown("space") && isOpen == false)
+        /*if (Input.GetKeyDown("space") && isOpen == false)
         {
             OpenTextBox();            
-        }
+        }*/
     }
 
     IEnumerator ShowDialogue()

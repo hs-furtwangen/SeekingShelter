@@ -38,7 +38,8 @@ public class GameController : MonoBehaviour
             {"hasThirdQuestItem", false },
             {"hasThirdNumber", false },
             {"hasFourthNumber", false },
-            {"hasFinalKey", false }
+            {"hasFinalKey", false },
+            {"isHidden", false }
         };
 
     }
