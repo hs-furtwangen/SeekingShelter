@@ -30,7 +30,15 @@ public class GameController : MonoBehaviour
         GameStates = new Dictionary<string, bool>
         {
             { "CanMove", true },
-            { "Blub", false }
+            { "Blub", false },
+            {"hasFirstQuestItem", false },
+            {"hasFirstNumber", false },
+            {"hasSecondQuestItem", false },
+            {"hasSecondNumber", false },
+            {"hasThirdQuestItem", false },
+            {"hasThirdNumber", false },
+            {"hasFourthNumber", false },
+            {"hasFinalKey", false }
         };
 
     }
