@@ -21,18 +21,8 @@ public class VorhangScript : MonoBehaviour
     // Update is called once per frame
     void Update()
     {
-        if (Input.GetKeyUp("space")  && playerInside == true)
+        if (Input.GetKeyDown("space")  && playerInside == true)
         {
-            if (isHiddenNow == false)
-            {
-                GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
-                GameController.Instance.GameStates["CanMove"] = false;
-                GameController.Instance.GameStates["isHidden"] = true;
-                closedVorhang.SetActive(true);
-                normalVorhang.SetActive(false);
-                isHiddenNow = true;
-            }
-
             if (isHiddenNow == true)
             {
                 GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = true;
@@ -41,6 +31,16 @@ public class VorhangScript : MonoBehaviour
                 closedVorhang.SetActive(false);
                 normalVorhang.SetActive(true);
                 isHiddenNow = false;
+            }
+
+            if (isHiddenNow == false)
+            {
+                GameObject.FindGameObjectWithTag("Player").GetComponent<SpriteRenderer>().enabled = false;
+                GameController.Instance.GameStates["CanMove"] = false;
+                GameController.Instance.GameStates["isHidden"] = true;
+                closedVorhang.SetActive(true);
+                normalVorhang.SetActive(false);
+                isHiddenNow = true;
             }
         }
     }
