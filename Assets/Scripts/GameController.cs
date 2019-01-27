@@ -59,6 +59,12 @@ public class GameController : MonoBehaviour
 
     void Update()
     {
+        if (GameStates["hasFirstNumber"] && GameStates["hasSecondNumber"] && GameStates ["hasThirdNumber"] && !GameStates["hasFourthNumber"])
+        {
+            GameStates["hasFourthNumber"] = true;
+        }
+
+
         if (GameStates["canSpawnGhost"])
         {
             if (GameStates["aboutToSpawnGhost"])
