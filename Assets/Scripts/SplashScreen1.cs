@@ -1,6 +1,7 @@
 ﻿using System.Collections;
 using System.Collections.Generic;
 using UnityEngine;
+using UnityEngine.SceneManagement;
 
 public class SplashScreen1 : MonoBehaviour
 {
@@ -19,9 +20,7 @@ public class SplashScreen1 : MonoBehaviour
 
     public void StartGame()
     {
-        SplashScreen.SetActive(false);
-        CreditsScreen.SetActive(false);
-        ControlScreen.SetActive(false);
+        SceneManager.LoadScene(1);
     }
 
     public void OpenCredits()

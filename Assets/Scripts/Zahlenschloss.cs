@@ -68,7 +68,7 @@ public class Zahlenschloss : MonoBehaviour
 
         if (((fieldOneValue == 4 && fieldTwoValue == 1) && fieldThreeValue == 6) && fieldFourValue == 9)
         {
-            Debug.Log("All Numbers are correct");
+            Application.Quit();
             GameController.Instance.GameStates["hasFinalKey"] = true;
         }
     }

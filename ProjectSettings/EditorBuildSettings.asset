@@ -6,6 +6,9 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
+    path: Assets/Scenes/New Scene.unity
+    guid: 99c00471b5943a24faf626c9f140deb8
+  - enabled: 1
     path: Assets/Scenes/AlexStuff.unity
     guid: 54afa5e15b4e64d429245eacef5854f3
   m_configObjects: {}
