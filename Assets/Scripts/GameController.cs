@@ -51,7 +51,8 @@ public class GameController : MonoBehaviour
             {"hasFinalKey", false },
             {"isHidden", false },
             {"canSpawnGhost", false },
-            {"aboutToSpawnGhost", false }
+            {"aboutToSpawnGhost", false },
+            {"ghostHasSpawned", false },
         };
 
     }
@@ -64,12 +65,16 @@ public class GameController : MonoBehaviour
             {
                 if (GhostTimer > 0)
                 {
-                    GhostTimer -= Time.deltaTime;
+                    if (!GameStates["isHidden"])
+                    {
+                        GhostTimer -= Time.deltaTime;
+                    }
                 }
                 else
                 {
                     SpawnGhost();
                 }
+
             }
             else
             {
@@ -85,13 +90,31 @@ public class GameController : MonoBehaviour
                 }
             }
         }
+
+        if (GameStates["ghostHasSpawned"] && GameStates["isHidden"])
+        {
+            FuckOffGhost();
+        }
+    }
+
+    public void FuckOffGhost()
+    {
+        ActiveGhost.GetComponent<Animator>().enabled = false;
+        StartCoroutine(FadeOut(ActiveGhost.GetComponent<SpriteRenderer>(), true));
+        GameStates["ghostHasSpawned"] = false;
+        GameStates["canSpawnGhost"] = true;
+        GameStates["ghostIsAboutToSpawn"] = false;
+
+        GhostTimer = GhostTime * 2;
     }
 
     public void SpawnGhost(bool overridecanspawnghost = false)
     {
         if ((GameStates["canSpawnGhost"] || overridecanspawnghost) && CurrentRoom != null)
         {
+            SoundManager.Instance.BackgroundChange(3);
             GameStates["canSpawnGhost"] = false;
+            GameStates["ghostHasSpawned"] = true;
             Debug.Log("Spawning");
 
             var go = Instantiate(GhostPrefab);
@@ -124,6 +147,10 @@ public class GameController : MonoBehaviour
     public void KillPlayer()
     {
         DoTeleport(new Vector2(34.17102f, -16.89323f), KillCam, ActiveCam, null, false);
+        GameStates["ghostHasSpawned"] = false;
+        GameStates["canSpawnGhost"] = false;
+        GameStates["ghostIsAboutToSpawn"] = false;
+
     }
 
     public void DoTeleport(Vector2 pos, Cinemachine.CinemachineVirtualCamera ActivateCamera, Cinemachine.CinemachineVirtualCamera DeactivateCamera, GameObject GoingToRoom, bool canSpawnGhost = true)
@@ -153,32 +180,63 @@ public class GameController : MonoBehaviour
 
     IEnumerator TeleportCo(Vector2 pos, Cinemachine.CinemachineVirtualCamera ActivateCamera, Cinemachine.CinemachineVirtualCamera DeactivateCamera)
     {
-        StartCoroutine(FadeOut());
+        StartCoroutine(FadeOut(BlackfadeImage));
         yield return new WaitForSecondsRealtime(2f);
         Player.transform.position = pos;
         ActivateCamera.enabled = true;
         DeactivateCamera.enabled = false;
         GameStates["CanMove"] = true;
-        StartCoroutine(FadeIn());
+        StartCoroutine(FadeIn(BlackfadeImage));
     }
 
-    IEnumerator FadeOut()
+    IEnumerator FadeOut(Image sr, bool destroy = false)
     {
         for (float f = 0f; f < 1; f += 0.01f)
         {
-            Color c = BlackfadeImage.color;
+            Color c = sr.color;
             c.a = f;
-            BlackfadeImage.color = c;
+            sr.color = c;
             yield return null;
         }
+
+        if (destroy)
+        {
+            Destroy(sr.gameObject);
+        }
     }
-    IEnumerator FadeIn()
+    IEnumerator FadeIn(Image sr)
     {
         for (float f = 1f; f >= 0; f -= 0.01f)
         {
-            Color c = BlackfadeImage.color;
+            Color c = sr.color;
             c.a = f;
-            BlackfadeImage.color = c;
+            sr.color = c;
+            yield return null;
+        }
+    }
+    IEnumerator FadeOut(SpriteRenderer sr, bool destroy = false)
+    {
+        for (float f = 1f; f >= 0; f -= 0.01f)
+        {
+            Color c = sr.color;
+            c.a = f;
+            sr.color = c;
+            yield return null;
+        }
+
+        if (destroy)
+        {
+            Destroy(sr.gameObject);
+            SoundManager.Instance.BackgroundChange(0);
+        }
+    }
+    IEnumerator FadeIn(SpriteRenderer sr)
+    {
+        for (float f = 0f; f < 1; f += 0.01f)
+        {
+            Color c = sr.color;
+            c.a = f;
+            sr.color = c;
             yield return null;
         }
     }

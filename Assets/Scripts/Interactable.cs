@@ -26,6 +26,8 @@ public class Interactable : MonoBehaviour
 
     private bool active;
 
+    public GameObject Spawns;
+
     void Start()
     {
         try
@@ -127,6 +129,13 @@ public class Interactable : MonoBehaviour
             if (Playsound)
             {
                 SoundManager.Instance.Playsound(SoundID);
+            }
+
+            if (Spawns != null)
+            {
+                var go = Instantiate(Spawns, this.transform);
+                go.transform.parent = this.transform.parent;
+                go.transform.position = this.transform.position;                
             }
 
             if (Dies)
