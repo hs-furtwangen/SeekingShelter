@@ -8,6 +8,8 @@ public class Interactable : MonoBehaviour
     public Vector3 TeleportLocation;
     public Cinemachine.CinemachineVirtualCamera ActivateCamera;
     public Cinemachine.CinemachineVirtualCamera DeactivateCamera;
+    public GameObject GoingToRoom;
+    public bool CanSpawnGhost = true;
 
     public List<string> GameStatesToEnable;
     public List<string> GameStatesToDisable;
@@ -71,13 +73,18 @@ public class Interactable : MonoBehaviour
             {
                 if (ActivateCamera != null && DeactivateCamera != null)
                 {
+                    if (GoingToRoom == null)
+                    {
+                        CanSpawnGhost = false;
+                    }
+
                     if (TeleportTransform != null)
                     {
-                        GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera);
+                        GameController.Instance.DoTeleport(TeleportTransform.position, ActivateCamera, DeactivateCamera, GoingToRoom, CanSpawnGhost);
                     }
                     else
                     {
-                        GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera);
+                        GameController.Instance.DoTeleport(TeleportLocation, ActivateCamera, DeactivateCamera, GoingToRoom, CanSpawnGhost);
                     }
                 }
             }
