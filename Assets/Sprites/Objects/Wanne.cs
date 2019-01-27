@@ -23,7 +23,7 @@ public class Wanne : MonoBehaviour
     {
         if (Input.GetKeyDown("space") && playerInside == true)
         {
-            if (GameController.Instance.GameStates["hasSecondQuestItem"] = true)
+            if (GameController.Instance.GameStates["hasSecondQuestItem"] == true)
             {
                 emptyWanne.SetActive(true);
                 volleWanne.SetActive(false);
