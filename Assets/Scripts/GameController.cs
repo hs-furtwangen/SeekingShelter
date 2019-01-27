@@ -49,6 +49,7 @@ public class GameController : MonoBehaviour
             {"hasThirdNumber", false },
             {"hasFourthNumber", false },
             {"hasFinalKey", false },
+            {"isHidden", false }
             {"canSpawnGhost", false },
             {"aboutToSpawnGhost", false }
         };
