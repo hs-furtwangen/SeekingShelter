@@ -20,6 +20,8 @@ public class Interactable : MonoBehaviour
     public bool Playsound;
     public int SoundID;
 
+    public bool Dies = false;
+
     private Material mat;
 
     private bool active;
@@ -125,6 +127,11 @@ public class Interactable : MonoBehaviour
             if (Playsound)
             {
                 SoundManager.Instance.Playsound(SoundID);
+            }
+
+            if (Dies)
+            {
+                Destroy(this.gameObject);
             }
         }
     }
